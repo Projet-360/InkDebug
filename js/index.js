@@ -9,19 +9,11 @@ window.onload = function () {
   // CHANGEMENT DE LA COULEUR DU BODY
 
   const GeneralSM = new ScrollMagic.Controller();
-
+  var aTM = new TimelineMax();
   
-
-
-
-
-
-
-
-    
   // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   // ZOOM a
-  var aTM = new TimelineMax();
+
 
   aTM.add([
     TweenMax.fromTo(".ink-a-js", 1, {
@@ -54,17 +46,10 @@ window.onload = function () {
 var bTM = new TimelineMax();
 
 bTM.add([
-  TweenMax.from(".ink-b-js", 1, {
-    scale: 0,
-    y: "-100%",
-    position: "fixed",
-    ease: Linear.easeNone,
-    display: "none",
-    force3D: false
-  }),
 
   TweenMax.fromTo(".ink-b-js", 1, {
     scale: 0,
+    y: "-100%",
     position: "fixed",
     opacity: 0,
     force3D: false
@@ -72,7 +57,8 @@ bTM.add([
     scale: 1,
     y: "-100%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 1)",
+    opacity: 1,
+    ease: "expoScale(0, 1)",
     force3D: false
   }),
 ]);
@@ -100,7 +86,8 @@ bOutTM.add([
     position: "fixed",
     opacity: 1,
     force3D: false,
-    opacity: 1,ease: "expoScale(0, 130)",
+    opacity: 1,
+    ease: "expoScale(0, 130)",
   }),
 ]);
 
@@ -121,12 +108,12 @@ var bOutTM = new ScrollMagic.Scene({
 // CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 
-var cStartTM = new TimelineMax();
-var cInTM = new TimelineMax();
-var cTM = new TimelineMax();
-var cOutTM = new TimelineMax();
+var Before = new TimelineMax();
+var Enter = new TimelineMax();
+var Here = new TimelineMax();
+var After = new TimelineMax();
 
-cStartTM.add([
+Before.add([
   TweenMax.fromTo(".ink-c-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -138,21 +125,22 @@ cStartTM.add([
     opacity: 1,
     y: "-200%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0)",
+    opacity: 1,
+    ease: "expoScale(0, 0)",
     force3D: false
   }),
 ]);
 
-var cStartTM = new ScrollMagic.Scene({
+var Before = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-a',
     triggerHook: 1,
   })
 
-  .setTween(cStartTM)
+  .setTween(Before)
   .addTo(GeneralSM)
 
-cInTM.add([
+Enter.add([
   TweenMax.fromTo(".ink-c-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -164,21 +152,22 @@ cInTM.add([
     opacity: 1,
     y: "-200%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0.02)",
+    opacity: 1,
+    ease: "expoScale(0, 0.02)",
     force3D: false
   }),
 ]);
 
-var cInTM = new ScrollMagic.Scene({
+var Enter = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-a',
     triggerHook: -1,
   })
 
-  .setTween(cInTM)
+  .setTween(Enter)
   .addTo(GeneralSM)
 
-cTM.add([
+Here.add([
   TweenMax.fromTo(".ink-c-js", 1, {
     scale: 0.02,
     y: "-200%",
@@ -188,21 +177,22 @@ cTM.add([
     scale: 1,
     y: "-200%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0.02, 1)",
+    opacity: 1,
+    ease: "expoScale(0.02, 1)",
     force3D: false
   }),
 ]);
 
-var cTM = new ScrollMagic.Scene({
+var Here = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-b',
     triggerHook: 0,
   })
 
-  .setTween(cTM)
+  .setTween(Here)
   .addTo(GeneralSM)
 
-cOutTM.add([
+After.add([
   TweenMax.fromTo(".ink-c-js", 1, {
     scale: 1,
     y: "-200%",
@@ -214,17 +204,18 @@ cOutTM.add([
     y: "-200%",
     opacity: 1,
     force3D: false,
-    opacity: 1,ease: "expoScale(1, 130)",
+    opacity: 1,
+    ease: "expoScale(1, 130)",
   }),
 ]);
 
-var cOutTM = new ScrollMagic.Scene({
+var After = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-c',
     triggerHook: 0,
   })
 
-  .setTween(cOutTM)
+  .setTween(After)
   .addTo(GeneralSM)
 
 
@@ -239,12 +230,12 @@ var cOutTM = new ScrollMagic.Scene({
 // DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 
-var cStartTM = new TimelineMax();
-var cInTM = new TimelineMax();
-var cTM = new TimelineMax();
-var cOutTM = new TimelineMax();
+var Before = new TimelineMax();
+var Enter = new TimelineMax();
+var Here = new TimelineMax();
+var After = new TimelineMax();
 
-cStartTM.add([
+Before.add([
   TweenMax.fromTo(".ink-d-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -256,20 +247,21 @@ cStartTM.add([
     opacity: 1,
     y: "-300%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0)",
+    opacity: 1,
+    ease: "expoScale(0, 0)",
     force3D: false
   }),
 ]);
-var cStartTM = new ScrollMagic.Scene({
+var Before = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-b',
     triggerHook: 1,
   })
 
-  .setTween(cStartTM)
+  .setTween(Before)
   .addTo(GeneralSM)
 
-cInTM.add([
+Enter.add([
   TweenMax.fromTo(".ink-d-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -281,21 +273,22 @@ cInTM.add([
     opacity: 1,
     y: "-300%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0.02)",
+    opacity: 1,
+    ease: "expoScale(0, 0.02)",
     force3D: false
   }),
 ]);
 
-var cInTM = new ScrollMagic.Scene({
+var Enter = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-b',
     triggerHook: -1,
   })
 
-  .setTween(cInTM)
+  .setTween(Enter)
   .addTo(GeneralSM)
 
-cTM.add([
+Here.add([
   TweenMax.fromTo(".ink-d-js", 1, {
     scale: 0.02,
     y: "-300%",
@@ -305,21 +298,22 @@ cTM.add([
     scale: 1,
     y: "-300%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0.02, 1)",
+    opacity: 1,
+    ease: "expoScale(0.02, 1)",
     force3D: false
   }),
 ]);
 
-var cTM = new ScrollMagic.Scene({
+var Here = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-c',
     triggerHook: 0,
   })
 
-  .setTween(cTM)
+  .setTween(Here)
   .addTo(GeneralSM)
 
-cOutTM.add([
+After.add([
   TweenMax.fromTo(".ink-d-js", 1, {
     scale: 1,
     y: "-300%",
@@ -331,17 +325,18 @@ cOutTM.add([
     y: "-300%",
     opacity: 1,
     force3D: false,
-    opacity: 1,ease: "expoScale(1, 130)",
+    opacity: 1,
+    ease: "expoScale(1, 130)",
   }),
 ]);
 
-var cOutTM = new ScrollMagic.Scene({
+var After = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-d',
     triggerHook: 0,
   })
 
-  .setTween(cOutTM)
+  .setTween(After)
   .addTo(GeneralSM)
 
 
@@ -355,12 +350,12 @@ var cOutTM = new ScrollMagic.Scene({
 // EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
-var cStartTM = new TimelineMax();
-var cInTM = new TimelineMax();
-var cTM = new TimelineMax();
-var cOutTM = new TimelineMax();
+var Before = new TimelineMax();
+var Enter = new TimelineMax();
+var Here = new TimelineMax();
+var After = new TimelineMax();
 
-cStartTM.add([
+Before.add([
   TweenMax.fromTo(".ink-e-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -372,20 +367,21 @@ cStartTM.add([
     opacity: 1,
     y: "-400%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0)",
+    opacity: 1,
+    ease: "expoScale(0, 0)",
     force3D: false
   }),
 ]);
-var cStartTM = new ScrollMagic.Scene({
+var Before = new ScrollMagic.Scene({
     duration: '100%',
-    triggerElement: '.ink-c',
+    triggerElement: '.ink-a',
     triggerHook: 1,
   })
 
-  .setTween(cStartTM)
+  .setTween(Before)
   .addTo(GeneralSM)
 
-cInTM.add([
+Enter.add([
   TweenMax.fromTo(".ink-e-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -397,21 +393,22 @@ cInTM.add([
     opacity: 1,
     y: "-400%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0.02)",
+    opacity: 1,
+    ease: "expoScale(0, 0.02)",
     force3D: false
   }),
 ]);
 
-var cInTM = new ScrollMagic.Scene({
+var Enter = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-c',
     triggerHook: -1,
   })
 
-  .setTween(cInTM)
+  .setTween(Enter)
   .addTo(GeneralSM)
 
-cTM.add([
+Here.add([
   TweenMax.fromTo(".ink-e-js", 1, {
     scale: 0.02,
     y: "-400%",
@@ -421,21 +418,22 @@ cTM.add([
     scale: 1,
     y: "-400%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0.02, 1)",
+    opacity: 1,
+    ease: "expoScale(0.02, 1)",
     force3D: false
   }),
 ]);
 
-var cTM = new ScrollMagic.Scene({
+var Here = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-d',
     triggerHook: 0,
   })
 
-  .setTween(cTM)
+  .setTween(Here)
   .addTo(GeneralSM)
 
-cOutTM.add([
+After.add([
   TweenMax.fromTo(".ink-e-js", 1, {
     scale: 1,
     y: "-400%",
@@ -447,17 +445,18 @@ cOutTM.add([
     y: "-400%",
     opacity: 1,
     force3D: false,
-    opacity: 1,ease: "expoScale(1, 130)",
+    opacity: 1,
+    ease: "expoScale(1, 130)",
   }),
 ]);
 
-var cOutTM = new ScrollMagic.Scene({
+var After = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-e',
     triggerHook: 0,
   })
 
-  .setTween(cOutTM)
+  .setTween(After)
   .addTo(GeneralSM)
 
 
@@ -469,12 +468,12 @@ var cOutTM = new ScrollMagic.Scene({
 // EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
-var cStartTM = new TimelineMax();
-var cInTM = new TimelineMax();
-var cTM = new TimelineMax();
-var cOutTM = new TimelineMax();
+var Before = new TimelineMax();
+var Enter = new TimelineMax();
+var Here = new TimelineMax();
+var After = new TimelineMax();
 
-cStartTM.add([
+Before.add([
   TweenMax.fromTo(".ink-f-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -486,20 +485,21 @@ cStartTM.add([
     opacity: 1,
     y: "-500%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0)",
+    opacity: 1,
+    ease: "expoScale(0, 0)",
     force3D: false
   }),
 ]);
-var cStartTM = new ScrollMagic.Scene({
+var Before = new ScrollMagic.Scene({
     duration: '100%',
-    triggerElement: '.ink-d',
+    triggerElement: '.ink-a',
     triggerHook: 1,
   })
 
-  .setTween(cStartTM)
+  .setTween(Before)
   .addTo(GeneralSM)
 
-cInTM.add([
+Enter.add([
   TweenMax.fromTo(".ink-f-js", 1, {
     scale: 0,
     opacity: -0.5,
@@ -511,21 +511,22 @@ cInTM.add([
     opacity: 1,
     y: "-500%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0, 0.02)",
+    opacity: 1,
+    ease: "expoScale(0, 0.02)",
     force3D: false
   }),
 ]);
 
-var cInTM = new ScrollMagic.Scene({
+var Enter = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-d',
     triggerHook: -1,
   })
 
-  .setTween(cInTM)
+  .setTween(Enter)
   .addTo(GeneralSM)
 
-cTM.add([
+Here.add([
   TweenMax.fromTo(".ink-f-js", 1, {
     scale: 0.02,
     y: "-500%",
@@ -535,21 +536,22 @@ cTM.add([
     scale: 1,
     y: "-500%",
     position: "fixed",
-    opacity: 1,ease: "expoScale(0.02, 1)",
+    opacity: 1,
+    ease: "expoScale(0.02, 1)",
     force3D: false
   }),
 ]);
 
-var cTM = new ScrollMagic.Scene({
+var Here = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-e',
     triggerHook: 0,
   })
 
-  .setTween(cTM)
+  .setTween(Here)
   .addTo(GeneralSM)
 
-cOutTM.add([
+After.add([
   TweenMax.fromTo(".ink-f-js", 1, {
     scale: 1,
     y: "-500%",
@@ -566,13 +568,13 @@ cOutTM.add([
   }),
 ]);
 
-var cOutTM = new ScrollMagic.Scene({
+var After = new ScrollMagic.Scene({
     duration: '100%',
     triggerElement: '.ink-f',
     triggerHook: 0,
   })
 
-  .setTween(cOutTM)
+  .setTween(After)
   .addTo(GeneralSM)
 
 
