@@ -13,13 +13,9 @@ html {
   color: red !important;
 }
 
-
-
-@font-face {
-  font-family: handwrite;
-  src: url("police/Darkwoman.otf") format("opentype");
+body {
+  margin: 0;
 }
-
 
 main {
   display: -ms-flexbox;
@@ -71,6 +67,11 @@ main {
   justify-content: center;
   align-content: stretch;
   align-items: center;
+
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  top: 0 !important;
 }
 
 /*  FIN GSAP ACTIF DEUXIEME CONTENANT */
@@ -102,27 +103,7 @@ main {
 
 
 
-@keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
 
 
 
 
-
-body {
-  margin: 0;
-}
