@@ -35,9 +35,8 @@ main {
 .ink-c,
 .ink-e,
 .ink-d,
-.ink-e,
-.ink-f {
-  height: 100vh;
+.ink-e {
+  height: 200vh;
   width: 100vw;
 
   display: flex;
@@ -48,7 +47,18 @@ main {
   align-items: center;
   scroll-snap-align: start;
 }
+.ink-f {
+  height: 0vh !important;
+  width: 100vw;
 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  scroll-snap-align: start;
+}
 /*  FIN BALISE SECTION PREMIER CONTENANT */
 
 /*  GSAP ACTIF DEUXIEME CONTENANT */
@@ -78,32 +88,25 @@ main {
 
 
 
-/* INDICATEUR DU SCROLL EN HAUT DE L'ECRAN */
-.scroll-indicator {
-  position: fixed;
-  left: 0;
-  bottom: -1px;
-  right: 0;
-  height: 10px;
-  background: #1f1f1f;
-  z-index: 10;
 
-  &__line {
-    height: 100%;
-    width: 0;
-    background: #068fe9;
-    ;
-    transition: width 2s ease;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
+.ink-a-js { 
+  background-color: rebeccapurple;
 }
-
-/* FIN INDICATEUR DU SCROLL EN HAUT DE L'ECRAN */
-
-
-
-
-
-
-
+.ink-b-js { 
+  background-color: teal;
+}
+.ink-c-js { 
+  background-color: yellowgreen;
+}
+.ink-e-js { 
+  background-color: indianred;
+}
+.ink-d-js { 
+  background-color: olive;
+}
+.ink-e-js { 
+  background-color: peru;
+}
+.ink-f-js { 
+  background-color: darkolivegreen;
+}
