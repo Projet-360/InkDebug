@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 pin: true,
                 scrub: .7,                    
                 start: "top-=50%",
-                end: "+=" + (window.innerHeight) - 100 + "vh",
+                end: "+=" + (window.innerHeight),
             }
         })
         
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 pin: true,
                 scrub: .7,
                 start: "top-=50%",
-                end: "+=" + (window.innerHeight)- 200 + "vh",
+                end: "+=" + (window.innerHeight),
             }
         })
         
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 pin: true,
                 scrub: .7,
                 start: "top-=50%",
-                end: "+=" + (window.innerHeight) - 300 + "vh",
+                end: "+=" + (window.innerHeight),
             }
         })
         
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 pin: true,
                 scrub: .7,
                 start: "top-=50%",
-                end: "+=" + (window.innerHeight) - 400 + "vh",
+                end: "+=" + (window.innerHeight),
             }
         })
 
