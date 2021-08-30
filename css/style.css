@@ -100,26 +100,4 @@ main {
 }
 
 /*  FIN GSAP ACTIF DEUXIEME CONTENANT */
-/* INDICATEUR DU SCROLL EN HAUT DE L'ECRAN */
-.scroll-indicator {
-  position: fixed;
-  left: 0;
-  bottom: -1px;
-  right: 0;
-  height: 10px;
-  background: #1f1f1f;
-  z-index: 10;
-}
-
-.scroll-indicator__line {
-  height: 100%;
-  width: 0;
-  background: #068fe9;
-  -webkit-transition: width 2s ease;
-  transition: width 2s ease;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-/* FIN INDICATEUR DU SCROLL EN HAUT DE L'ECRAN */
 /*# sourceMappingURL=style.css.map */

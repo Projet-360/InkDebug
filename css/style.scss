@@ -78,32 +78,28 @@ main {
 
 
 
-/* INDICATEUR DU SCROLL EN HAUT DE L'ECRAN */
-.scroll-indicator {
-  position: fixed;
-  left: 0;
-  bottom: -1px;
-  right: 0;
-  height: 10px;
-  background: #1f1f1f;
-  z-index: 10;
-
-  &__line {
-    height: 100%;
-    width: 0;
-    background: #068fe9;
-    ;
-    transition: width 2s ease;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-}
-
-/* FIN INDICATEUR DU SCROLL EN HAUT DE L'ECRAN */
 
 
 
 
-
-
-
+// .ink-a {
+// background-color: hotpink;
+// }
+// .ink-b {
+// background-color: yellow;
+// }
+// .ink-c {
+// background-color: chocolate;
+// }
+// .ink-e {
+// background-color: violet;
+// }
+// .ink-d {
+// background-color: orange;
+// }
+// .ink-e {
+// background-color: maroon;
+// }
+// .ink-f {
+// background-color: darkblue;
+// }
